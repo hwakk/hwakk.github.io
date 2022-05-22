@@ -112,17 +112,17 @@ p {
   padding: 8px;
 }
 
-.navbar__menu {
-  display: flex;
-  padding: 8px 12px;
-}
-
-.navbar__logo {
+#navbar .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
 }
 
-.navbar__menu__item {
+#navbar .navbar__menu {
+  display: flex;
+  padding: 8px 12px;
+}
+
+#navbar .navbar__menu .navbar__menu__item {
   padding: 8px 12px;
   margin: 0 4px;
   color: var(--color-white);
@@ -131,16 +131,16 @@ p {
   border-radius: var(--size-border-radius);
 }
 
-.navbar__menu__item.active {
+#navbar .navbar__menu .navbar__menu__item.active {
   border: 1px solid var(--color-white);
 }
 
-.navbar__menu__item:hover {
+#navbar .navbar__menu .navbar__menu__item:hover {
   border-color: var(--color-white);
   background-color: var(--color-dark-pink);
 }
 
-.navbar__toggle-btn {
+#navbar .navbar__toggle-btn {
   position: absolute;
   top: 24px;
   right: 32px;
@@ -157,19 +157,19 @@ p {
   text-align: center;
 }
 
-.home__avatar {
+#home .home__container .home__avatar {
   width: 250px;
   height: 250px;
   border-radius: 50%;
   border: 2px solid var(--color-light-white);
 }
 
-.home__title,
-.home__description {
+#home .home__container .home__title,
+#home .home__container .home__description {
   color: var(--color-white);
 }
 
-.home__contact {
+#home .home__container .home__contact {
   color: var(--color-white);
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
@@ -179,7 +179,7 @@ p {
   border-radius: var(--size-border-radius);
 }
 
-.home__contact:hover {
+#home .home__container .home__contact:hover {
   background-color: var(--color-orange);
 }
 
@@ -196,13 +196,13 @@ p {
 }
 
 /* About */
-.about__majors {
+#about .about__majors {
   display: flex;
   justify-content: space-between;
   margin: 80px 0;
 }
 
-.major__icon {
+#about .about__majors .major .major__icon {
   width: 170px;
   height: 170px;
   line-height: 170px;
@@ -214,56 +214,65 @@ p {
   margin-bottom: 16px;
 }
 
-.major__icon i {
+#about .about__majors .major .major__icon i {
   transition: all var(--animation-duration) ease;
 }
 
-.major__icon:hover i {
+#about .about__majors .major .major__icon:hover i {
   color: var(--color-pink);
   transform: rotate(-30deg) scale(1.1);
 }
 
-.major__title,
-.major__description {
+#about .about__majors .major .major__title,
+#about .about__majors .major .major__description {
   color: var(--color-dark-grey);
 }
 
-.major__description {
+#about .about__majors .major .major__description {
   font-size: var(--font-small);
 }
 
-.about__jobs {
+#about .about__jobs {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.about__jobs:after {
+#about .about__jobs:after {
   content: "";
   display: block;
   position: absolute;
   left: 50%;
   width: 1px;
-  height: 15%;
+  height: 20%;
   background-color: var(--color-light-grey);
 }
 
-.education__title,
-.job__title {
+#about .about__jobs .educations .education__title,
+#about .about__jobs .jobs .job__title {
   text-align: center;
   color: var(--color-dark-grey);
-  margin-bottom: 22px;
+  margin-bottom: 40px;
 }
 
-.education,
-.job {
+#about .about__jobs .educations,
+#about .about__jobs .jobs {
+  width: 50%;
+}
+
+#about .about__jobs .educations .education,
+#about .about__jobs .jobs .job {
   display: flex;
   align-items: center;
   margin-bottom: 16px;
 }
 
-.education__icon,
-.job__icon {
+#about .about__jobs .jobs .job {
+  justify-content: flex-end;
+}
+
+#about .about__jobs .educations .education .education__icon,
+#about .about__jobs .jobs .job .job__icon {
   display: flex;
   justify-content: center;
   width: 20px;
@@ -273,26 +282,50 @@ p {
   color: var(--color-grey);
 }
 
-.education__description,
-.job__description {
+#about .about__jobs .educations .education .education__description {
   margin: 0 16px;
   text-align: left;
 }
 
-.education__name,
-.education__period,
-.job__name,
-.job__period {
+#about .about__jobs .jobs .job .job__description {
+  margin: 0 16px;
+  text-align: right;
+}
+
+#about
+  .about__jobs
+  .educations
+  .education
+  .education__description
+  .education__name,
+#about
+  .about__jobs
+  .educations
+  .education
+  .education__description
+  .education__period,
+#about .about__jobs .jobs .job .job__description .job__name,
+#about .about__jobs .jobs .job .job__description .job__period {
   color: var(--color-light-grey);
 }
 
-.education__name,
-.job__name {
+#about
+  .about__jobs
+  .educations
+  .education
+  .education__description
+  .education__name,
+#about .about__jobs .jobs .job .job__description .job__name {
   font-size: var(--font-small);
 }
 
-.education__period,
-.job__period {
+#about
+  .about__jobs
+  .educations
+  .education
+  .education__description
+  .education__period,
+#about .about__jobs .jobs .job .job__description .job__period {
   font-size: var(--font-micro);
 }
 
@@ -301,62 +334,62 @@ p {
   background-color: var(--color-yellow);
 }
 
-.skillset {
+#skills .skillset {
   display: flex;
   background-color: var(--color-light-grey);
   color: var(--color-light-white);
   margin: 20px 0;
 }
 
-.skillset__title {
+#skills .skillset .skillset__title {
   color: var(--color-white);
 }
 
-.skillset__left {
+#skills .skillset .skillset__left {
   flex-basis: 60%;
   background-color: var(--color-dark-grey);
   padding: 20px 40px;
 }
 
-.skill {
+#skills .skillset .skillset__left .skill {
   margin-bottom: 32px;
 }
 
-.skill__description {
+#skills .skillset .skillset__left .skill .skill__description {
   display: flex;
   justify-content: space-between;
 }
 
-.skill__bar {
+#skills .skillset .skillset__left .skill .skill__bar {
   width: 100%;
   height: 3px;
   background-color: var(--color-grey);
 }
 
-.skill__value {
+#skills .skillset .skillset__left .skill .skill__bar .skill__value {
   height: 3px;
   background-color: var(--color-orange);
 }
 
-.skillset__right {
+#skills .skillset .skillset__right {
   flex-basis: 40%;
 }
 
-.tools {
+#skills .skillset .skillset__right .tools {
   background-color: var(--color-grey);
 }
 
-.tools,
-.etc {
+#skills .skillset .skillset__right .tools,
+#skills .skillset .skillset__right .etc {
   padding: 20px;
 }
 
 /* Work */
-.work__categories {
+#work .work__categories {
   margin: 40px;
 }
 
-.category__btn {
+#work .work__categories .category__btn {
   border: 1px solid var(--color-dark-white);
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
@@ -364,19 +397,19 @@ p {
   position: relative;
 }
 
-.category__btn.selected,
-.category__btn:hover {
+#work .work__categories .category__btn.selected,
+#work .work__categories .category__btn:hover {
   background-color: var(--color-pink);
   color: var(--color-white);
 }
 
-.category__btn.selected .category__count,
-.category__btn:hover .category__count {
+#work .work__categories .category__btn.selected .category__count,
+#work .work__categories .category__btn:hover .category__count {
   opacity: 1;
   top: 0;
 }
 
-.category__count {
+#work .work__categories .category__btn .category__count {
   background-color: orange;
   border-radius: 50%;
   color: var(--color-white);
@@ -391,7 +424,7 @@ p {
   transition: all var(--animation-duration) ease-in;
 }
 
-.work__projects {
+#work .work__projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -399,12 +432,12 @@ p {
   transition: all var(--animation-duration) ease-out;
 }
 
-.work__projects.anim-out {
+#work .work__projects.anim-out {
   opacity: 0;
   transform: scale(0.9) translateY(40px);
 }
 
-.project {
+#work .work__projects .project {
   position: relative;
   display: flex;
   justify-content: center;
@@ -415,17 +448,17 @@ p {
   background-color: var(--color-light-white);
 }
 
-.project.invisible {
+#work .work__projects .project.invisible {
   display: none;
 }
 
-.project__img {
+#work .work__projects .project .project__img {
   max-width: 100%;
   max-height: 100%;
   align-self: center;
 }
 
-.project__description {
+#work .work__projects .project .project__description {
   position: absolute;
   background-color: var(--color-black);
   display: flex;
@@ -440,16 +473,16 @@ p {
   transition: all var(--animation-duration) ease-in;
 }
 
-.project:hover .project__description {
+#work .work__projects .project:hover .project__description {
   opacity: 0.8;
   transform: translateY(0px);
 }
 
-.project__description h3 {
+#work .work__projects .project .project__description h3 {
   color: var(--color-orange);
 }
 
-.project__description h3:after {
+#work .work__projects .project .project__description h3:after {
   content: "";
   display: block;
   position: relative;
@@ -468,23 +501,23 @@ p {
   padding: 50px;
 }
 
-.contact__title,
-.contact__email,
-.contact__rights {
+#contact .contact__title,
+#contact .contact__email,
+#contact .contact__rights {
   color: var(--color-white);
 }
 
-.contact__title {
+#contact .contact__title {
   margin: 32px 0;
 }
 
-.contact__links {
+#contact .contact__links {
   font-size: var(--font-large);
   margin: 24px 0;
   transition: all var(--animation-duration) ease-in;
 }
 
-.contact__links i:hover {
+#contact .contact__links i:hover {
   transform: scale(1.1);
   color: var(--color-dark-grey);
 }
@@ -521,7 +554,7 @@ p {
     --font-micro: 12px;
   }
 
-  .navbar__toggle-btn {
+  #navbar .navbar__toggle-btn {
     display: block;
     top: 16px;
     right: 16px;
@@ -538,14 +571,14 @@ p {
     padding: 16px;
   }
 
-  .navbar__menu {
+  #navbar .navbar__menu {
     flex-direction: column;
     text-align: center;
     width: 100%;
     display: none;
   }
 
-  .navbar__menu.open {
+  #navbar .navbar__menu.open {
     display: block;
   }
 
@@ -554,62 +587,51 @@ p {
     padding-top: 40px;
   }
 
-  .about__majors {
+  #about .about__majors {
     flex-direction: column;
     margin-top: 30px;
     margin-bottom: 0px;
   }
 
-  .major {
+  #about .about__majors .major {
     margin-bottom: 30px;
   }
 
-  .major:last-child {
+  #about .about__majors .major:last-child {
     margin-bottom: 60px;
   }
 
-  .about__jobs {
+  #about .about__jobs {
     flex-direction: column;
   }
 
-  .about__jobs:after {
+  #about .about__jobs:after {
     display: none;
   }
 
-  .educations,
-  .jobs {
+  #about .about__jobs .educations,
+  #about .about__jobs .jobs {
+    margin-bottom: 30px;
+    padding: 0 30px;
+    width: 100%;
+  }
+
+  #about .about__jobs .educations .education__title,
+  #about .about__jobs .jobs .job__title {
     margin-bottom: 30px;
   }
 
-  .skillset {
+  #skills .skillset {
     flex-direction: column;
   }
 
-  .category__btn {
+  #work .work__categories .category__btn {
     margin: 4px 0;
     width: 100%;
   }
 
-  .project {
+  #work .work__projects .project {
     flex-grow: 1;
-  }
-
-  .testimonial {
-    flex-direction: column;
-  }
-
-  .testimonial__avator {
-    width: 80px;
-    height: 80px;
-  }
-
-  .testimonial__avator:nth-child(even) {
-    margin: 0;
-    justify-content: end;
-  }
-
-  .testimonial__speech-bubble {
-    order: 1;
   }
 
   .arrow-up {
