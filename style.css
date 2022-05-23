@@ -4,19 +4,19 @@
   --color-white: #fff;
   --color-light-white: #eee;
   --color-dark-white: #bdbdbd;
-  --color-pink: #fe918d;
-  --color-dark-pink: #ff6863;
+  --color-pink: #d4a7d2;
+  --color-dark-pink: #8c6896;
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
-  --color-blue: #73aace;
-  --color-yellow: #fff7d1;
-  --color-orange: #feb546;
+  --color-blue: #9dadc9;
+  --color-yellow: #ffeccf;
+  --color-orange: #eed2fb;
   --color-black: #000;
 
   /* Font size */
-  --font-large: 48px;
-  --font-medium: 28px;
+  --font-large: 44px;
+  --font-medium: 24px;
   --font-regular: 18px;
   --font-small: 16px;
   --font-micro: 14px;
@@ -151,10 +151,40 @@ p {
 
 /* Home */
 #home {
-  background: url("imgs/home-background.png") center/cover no-repeat;
+  position: relative;
+  background: linear-gradient(-45deg, #a9809b, #d4a7d2, #fcd3cd, #f8e2c2);
+  background-size: 400% 400%;
+  animation: gradient 8s ease infinite;
   padding: 40px;
   padding-top: 120px;
   text-align: center;
+}
+
+#home:before {
+  content: "";
+  background-image: url(imgs/home-background.png);
+  background-position: bottom;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#home .home__container {
+  position: relative;
 }
 
 #home .home__container .home__avatar {
@@ -166,7 +196,7 @@ p {
 
 #home .home__container .home__title,
 #home .home__container .home__description {
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 #home .home__container .home__contact {
@@ -180,7 +210,8 @@ p {
 }
 
 #home .home__container .home__contact:hover {
-  background-color: var(--color-orange);
+  color: var(--color-dark-pink);
+  background-color: var(--color-white);
 }
 
 /* Section */
@@ -358,16 +389,19 @@ p {
 #skills .skillset .skillset__left .skill .skill__description {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 5px;
 }
 
 #skills .skillset .skillset__left .skill .skill__bar {
   width: 100%;
-  height: 3px;
+  height: 8px;
+  border-radius: 4px;
   background-color: var(--color-grey);
 }
 
 #skills .skillset .skillset__left .skill .skill__bar .skill__value {
-  height: 3px;
+  height: 8px;
+  border-radius: 4px;
   background-color: var(--color-orange);
 }
 
@@ -410,7 +444,7 @@ p {
 }
 
 #work .work__categories .category__btn .category__count {
-  background-color: orange;
+  background-color: var(--color-dark-pink);
   border-radius: 50%;
   color: var(--color-white);
   width: 24px;
