@@ -19,7 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <script src="main.js" defer></script>
   </head>
   <body>
@@ -202,19 +202,21 @@
             <div class="tools">
               <h3 class="skillset__title">Tools</h3>
               <ul class="tools__list">
-                <li><span>Visual Studio Code</span></li>
                 <li><span>Eclipse</span></li>
+                <li><span>Visual Studio Code</span></li>
                 <li><span>Android Studio Code</span></li>
+                <li><span>Photoshop</span></li>
+                <li><span>Illustrator</span></li>
+                <li><span>Procreate</span></li>
               </ul>
             </div>
             <div class="etc">
               <h3 class="skillset__title">Etc</h3>
               <ul class="etc__list">
-                <li><span>Kotlin</span></li>
-                <li><span>Git</span></li>
-                <li><span>Photoshop</span></li>
-                <li><span>Illustrator</span></li>
-                <li><span>Procreate</span></li>
+                <li><span>git</span></li>
+                <li><span>Github</span></li>
+                <li><span>Slack</span></li>
+                <li><span>Notion</span></li>
               </ul>
             </div>
           </div>
@@ -230,34 +232,49 @@
           <button class="category__btn selected" data-filter="*">
             All<span class="category__count">8</span>
           </button>
-          <button class="category__btn" data-filter="front-end">
-            Front-end<span class="category__count">5</span>
+          <button class="category__btn" data-filter="HTML">
+            HTML&#47;CSS<span class="category__count">2</span>
           </button>
-          <button class="category__btn" data-filter="back-end">
-            Back-end<span class="category__count">3</span>
+          <button class="category__btn" data-filter="React">
+            React<span class="category__count">2</span>
           </button>
         </div>
         <div class="work__projects">
-          <a href="#" class="project" target="_blank" data-type="front-end">
+          <ul>
+            <li class="project" data-type="HTML">
+              <img
+                src="imgs/projects/starbucks.png"
+                alt="Starbucks"
+                class="project__img"
+              />
+              <div class="project__description">
+                <h3>Starbucks</h3>
+                <p>Clone coding with HTML and CSS</p>
+                <div>
+                  <a href="study/blog01/index.html">Page</a>
+                  <a
+                    href="https://github.com/hwakk/starbucks.git"
+                    target="_blank"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
+          <a
+            href="https://github.com/hwakk/habit_tracker.git"
+            class="project"
+            target="_blank"
+            data-type="front-end"
+          >
             <img
               src="imgs/projects/game.png"
-              alt="Youtube"
+              alt="HabitTracker"
               class="project__img"
             />
             <div class="project__description">
-              <h3>Youtube Site</h3>
-              <span>Clone coding with HTML and CSS</span>
-            </div>
-          </a>
-          <a href="#" class="project" target="_blank" data-type="back-end">
-            <img
-              src="imgs/projects/game.png"
-              alt="Youtube"
-              class="project__img"
-            />
-            <div class="project__description">
-              <h3>Youtube Site</h3>
-              <span>Clone coding with HTML and CSS</span>
+              <h3>Habit Tracker</h3>
+              <span>Coding with React, HTML and CSS</span>
             </div>
           </a>
           <a href="#" class="project" target="_blank" data-type="front-end">

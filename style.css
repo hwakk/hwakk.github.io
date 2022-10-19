@@ -162,7 +162,7 @@ p {
 
 #home:before {
   content: "";
-  background-image: url(imgs/home-background.png);
+  background: url(imgs/home-background.png) no-repeat 50% 0 / cover;
   background-position: bottom;
   position: absolute;
   top: 0px;
@@ -524,9 +524,14 @@ p {
   width: 50px;
   height: 2px;
   transform: translateX(-50%);
-  margin-left: -12px;
+  /* margin-left: -12px; */
   margin-top: 8px;
   background-color: var(--color-dark-white);
+}
+
+#work .work__projects .project .project__description p {
+  color: var(--color-white);
+  font-size: 16px;
 }
 
 /* Contact */
@@ -565,7 +570,7 @@ p {
   height: 70px;
   font-size: 50px;
   color: var(--color-white);
-  background-color: var(--color-pink);
+  background-color: var(--color-dark-pink);
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
