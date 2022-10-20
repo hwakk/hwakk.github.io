@@ -471,6 +471,11 @@ p {
   transform: scale(0.9) translateY(40px);
 }
 
+#work .work__projects ul {
+  margin: 0;
+  display: flex;
+}
+
 #work .work__projects .project {
   position: relative;
   display: flex;
@@ -480,6 +485,7 @@ p {
   height: 250px;
   margin: 2px;
   background-color: var(--color-light-white);
+  overflow: hidden;
 }
 
 #work .work__projects .project.invisible {
