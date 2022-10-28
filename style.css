@@ -162,7 +162,7 @@ p {
 
 #home:before {
   content: "";
-  background: url(imgs/home-background.png) no-repeat 50% 0 / cover;
+  background: url(images/home-background.png) no-repeat 50% 0 / cover;
   background-position: bottom;
   position: absolute;
   top: 0px;
