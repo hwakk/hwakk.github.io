@@ -87,6 +87,22 @@ workBtnContainer.addEventListener("click", (e) => {
   }, 300);
 });
 
+// Pagination
+// const swiper = new Swiper(".work__projects", {
+//   slidesPerView: 4,
+//   slidesPerGroup: 4,
+//   loop: true,
+//   loopFillGroupWithBlank: true,
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+// });
+
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });

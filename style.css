@@ -471,10 +471,11 @@ p {
   transform: scale(0.9) translateY(40px);
 }
 
-#work .work__projects ul {
+/* #work .work__projects ul {
   margin: 0;
   display: flex;
-}
+  flex-wrap: wrap;
+} */
 
 #work .work__projects .project {
   position: relative;
