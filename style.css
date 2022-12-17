@@ -669,6 +669,11 @@ p {
     --font-micro: 12px;
   }
 
+  button,
+  html [type="button"] {
+    -webkit-appearance: none;
+  }
+
   #navbar .navbar__toggle-btn {
     display: block;
     top: 16px;
@@ -756,6 +761,5 @@ p {
     line-height: 50px;
     right: 16px;
     bottom: 16px;
-    -webkit-appearance: none;
   }
 }
