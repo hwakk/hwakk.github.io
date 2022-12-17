@@ -1,18 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400&display=swap");
+
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+
 /* Global */
 :root {
   /* Color */
   --color-white: #fff;
   --color-light-white: #eee;
   --color-dark-white: #bdbdbd;
-  --color-pink: #d4a7d2;
-  --color-dark-pink: #8c6896;
-  --color-dark-grey: #4d4d4d;
+  --color-purple: #d4a7d2;
+  --color-light-purple: #eed2fb;
+  --color-dark-purple: #8c6896;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
+  --color-dark-grey: #4d4d4d;
   --color-blue: #9dadc9;
   --color-yellow: #ffeccf;
-  --color-orange: #eed2fb;
-  --color-black: #000;
+  --color-black: #121212;
 
   /* Font size */
   --font-large: 44px;
@@ -25,6 +32,8 @@
   --weight-bold: 700;
   --weight-semi-bold: 600;
   --weight-regular: 400;
+  --weight-small: 300;
+  --weight-micro: 100;
 
   /* Size */
   --size-border-radius: 4px;
@@ -39,7 +48,7 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   cursor: default;
 }
@@ -81,12 +90,13 @@ h2 {
 
 h3 {
   font-size: var(--font-regular);
-  font-weight: var(--weight-regular);
+  font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 8px 0px;
 }
 
 p {
+  font-family: "Open Sans", sans-serif;
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   color: var(--color-black);
@@ -108,7 +118,7 @@ p {
 }
 
 #navbar.navbar--dark {
-  background-color: var(--color-pink);
+  background-color: var(--color-purple);
   padding: 8px;
 }
 
@@ -137,7 +147,7 @@ p {
 
 #navbar .navbar__menu .navbar__menu__item:hover {
   border-color: var(--color-white);
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-dark-purple);
 }
 
 #navbar .navbar__toggle-btn {
@@ -201,8 +211,9 @@ p {
 
 #home .home__container .home__contact {
   color: var(--color-white);
+  font-family: "Montserrat", sans-serif;
   font-size: var(--font-regular);
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-semi-bold);
   margin: 24px;
   padding: 8px 12px;
   border: 2px solid var(--color-white);
@@ -210,7 +221,7 @@ p {
 }
 
 #home .home__container .home__contact:hover {
-  color: var(--color-dark-pink);
+  color: var(--color-dark-purple);
   background-color: var(--color-white);
 }
 
@@ -230,7 +241,7 @@ p {
 #about .about__majors {
   display: flex;
   justify-content: space-between;
-  margin: 80px 0;
+  margin: 80px;
 }
 
 #about .about__majors .major .major__icon {
@@ -250,7 +261,7 @@ p {
 }
 
 #about .about__majors .major .major__icon:hover i {
-  color: var(--color-pink);
+  color: var(--color-purple);
   transform: rotate(-30deg) scale(1.1);
 }
 
@@ -260,103 +271,143 @@ p {
 }
 
 #about .about__majors .major .major__description {
+  font-family: "Open Sans", sans-serif;
   font-size: var(--font-small);
 }
 
-#about .about__jobs {
+#about .about__jobs .jobs__title {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-
-#about .about__jobs:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 50%;
-  width: 1px;
-  height: 20%;
-  background-color: var(--color-light-grey);
-}
-
-#about .about__jobs .educations .education__title,
-#about .about__jobs .jobs .job__title {
-  text-align: center;
-  color: var(--color-dark-grey);
   margin-bottom: 40px;
 }
 
-#about .about__jobs .educations,
-#about .about__jobs .jobs {
-  width: 50%;
+#about .about__jobs .jobs__title h2 {
+  flex: 1;
+  color: var(--color-dark-grey);
+  text-align: center;
 }
 
-#about .about__jobs .educations .education,
-#about .about__jobs .jobs .job {
+#about .about__jobs .jobs__container {
+  position: relative;
   display: flex;
-  align-items: center;
-  margin-bottom: 16px;
 }
 
-#about .about__jobs .jobs .job {
+#about .about__jobs .jobs__container .educations::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 160px;
+  background-color: var(--color-blue);
+}
+
+#about .about__jobs .jobs__container .educations,
+#about .about__jobs .jobs__container .jobs {
+  flex: 1;
+}
+
+#about .about__jobs .jobs__container .educations {
+  margin-right: 15px;
+}
+
+#about .about__jobs .jobs__container .jobs {
+  margin-left: 15px;
+}
+
+#about .about__jobs .jobs__container .educations .education,
+#about .about__jobs .jobs__container .jobs .job {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+#about .about__jobs .jobs__container .educations .education {
   justify-content: flex-end;
 }
 
-#about .about__jobs .educations .education .education__icon,
-#about .about__jobs .jobs .job .job__icon {
+#about .about__jobs .jobs__container .jobs .job {
+  top: 50px;
+}
+
+#about .about__jobs .jobs__container .educations .education .education__icon,
+#about .about__jobs .jobs__container .jobs .job .job__icon {
+  position: absolute;
   display: flex;
   justify-content: center;
   width: 20px;
   height: 20px;
-  font-size: 20px;
-  margin: 0;
-  color: var(--color-grey);
+  border: 2px solid var(--color-blue);
+  border-radius: 50%;
+  background-color: var(--color-white);
+  top: 6px;
+  /* z-index: 1; */
 }
 
-#about .about__jobs .educations .education .education__description {
-  margin: 0 16px;
-  text-align: left;
+#about .about__jobs .jobs__container .educations .education .education__icon {
+  right: -25px;
 }
 
-#about .about__jobs .jobs .job .job__description {
+#about .about__jobs .jobs__container .jobs .job .job__icon {
+  left: -25px;
+}
+
+#about
+  .about__jobs
+  .jobs__container
+  .educations
+  .education
+  .education__description {
   margin: 0 16px;
   text-align: right;
 }
 
-#about
-  .about__jobs
-  .educations
-  .education
-  .education__description
-  .education__name,
-#about
-  .about__jobs
-  .educations
-  .education
-  .education__description
-  .education__period,
-#about .about__jobs .jobs .job .job__description .job__name,
-#about .about__jobs .jobs .job .job__description .job__period {
-  color: var(--color-light-grey);
+#about .about__jobs .jobs__container .jobs .job .job__description {
+  margin: 0 16px;
+  text-align: left;
 }
 
 #about
   .about__jobs
+  .jobs__container
   .educations
   .education
   .education__description
   .education__name,
-#about .about__jobs .jobs .job .job__description .job__name {
+#about
+  .about__jobs
+  .jobs__container
+  .educations
+  .education
+  .education__description
+  .education__period,
+#about .about__jobs .jobs__container .jobs .job .job__description .job__name,
+#about .about__jobs .jobs__container .jobs .job .job__description .job__period {
+  color: var(--color-dark-grey);
+}
+
+#about
+  .about__jobs
+  .jobs__container
+  .educations
+  .education
+  .education__description
+  .education__name,
+#about .about__jobs .jobs__container .jobs .job .job__description .job__name {
   font-size: var(--font-small);
 }
 
 #about
   .about__jobs
+  .jobs__container
   .educations
   .education
   .education__description
   .education__period,
-#about .about__jobs .jobs .job .job__description .job__period {
+#about .about__jobs .jobs__container .jobs .job .job__description .job__period {
   font-size: var(--font-micro);
 }
 
@@ -402,7 +453,7 @@ p {
 #skills .skillset .skillset__left .skill .skill__bar .skill__value {
   height: 8px;
   border-radius: 4px;
-  background-color: var(--color-orange);
+  background-color: var(--color-light-purple);
 }
 
 #skills .skillset .skillset__right {
@@ -426,25 +477,28 @@ p {
 #work .work__categories .category__btn {
   border: 1px solid var(--color-dark-white);
   border-radius: var(--size-border-radius);
-  font-size: var(--font-regular);
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--font-small);
+  text-transform: uppercase;
   padding: 8px 48px;
   position: relative;
 }
 
 #work .work__categories .category__btn.selected,
 #work .work__categories .category__btn:hover {
-  background-color: var(--color-pink);
+  background-color: var(--color-purple);
   color: var(--color-white);
+  border-color: var(--color-purple);
 }
 
 #work .work__categories .category__btn.selected .category__count,
 #work .work__categories .category__btn:hover .category__count {
   opacity: 1;
-  top: 0;
+  top: -5px;
 }
 
 #work .work__categories .category__btn .category__count {
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-dark-purple);
   border-radius: 50%;
   color: var(--color-white);
   width: 24px;
@@ -520,7 +574,7 @@ p {
 }
 
 #work .work__projects .project .project__description h3 {
-  color: var(--color-orange);
+  color: var(--color-light-purple);
 }
 
 #work .work__projects .project .project__description h3:after {
@@ -543,7 +597,7 @@ p {
 
 /* Contact */
 #contact {
-  background-color: var(--color-pink);
+  background-color: var(--color-purple);
   padding: 50px;
 }
 
@@ -565,7 +619,22 @@ p {
 
 #contact .contact__links i:hover {
   transform: scale(1.1);
-  color: var(--color-dark-grey);
+  color: var(--color-dark-purple);
+}
+
+#contact .contact__rights::before {
+  display: block;
+  content: "";
+  border-bottom: 1px solid var(--color-white);
+  opacity: 0.5;
+  margin: 30px 0;
+}
+
+#contact .contact__rights {
+  font-family: "Open Sans", sans-serif;
+  font-weight: var(--weight-small);
+  font-size: var(--font-micro);
+  letter-spacing: 0.5px;
 }
 
 /* Scroll */
@@ -577,7 +646,7 @@ p {
   height: 70px;
   font-size: 50px;
   color: var(--color-white);
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-dark-purple);
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
@@ -610,7 +679,7 @@ p {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
-    background-color: var(--color-pink);
+    background-color: var(--color-purple);
   }
 
   #navbar.navbar--dark {
@@ -687,5 +756,6 @@ p {
     line-height: 50px;
     right: 16px;
     bottom: 16px;
+    -webkit-appearance: none;
   }
 }
