@@ -295,79 +295,75 @@ p {
 }
 
 #about .about__jobs .jobs__container {
-  position: relative;
+  display: flex;
 }
 
 #about .about__jobs .jobs__container ul {
+  flex: 1;
   display: flex;
   flex-direction: column;
+  height: 250px;
 }
 
-#about .about__jobs .jobs__container ul .jobs__left,
-#about .about__jobs .jobs__container ul .jobs__right {
-  display: flex;
-}
-
-#about .about__jobs .jobs__container ul .jobs__left .education,
-#about .about__jobs .jobs__container ul .jobs__right .job {
-  flex: 1;
-}
-
-#about .about__jobs .jobs__container ul .jobs__left .education {
-  text-align: right;
-  padding-right: 30px;
-}
-
-#about .about__jobs .jobs__container ul .jobs__right .job {
-  text-align: left;
-  padding-left: 30px;
-}
-
-#about .about__jobs .jobs__container ul .jobs__left .education:first-child,
-#about .about__jobs .jobs__container ul .jobs__right .job:first-child {
+#about .about__jobs .jobs__container .jobs__left {
+  align-items: flex-end;
   border-right: 1px solid var(--color-blue);
 }
 
-#about .about__jobs .jobs__container ul .jobs__left .education:last-child,
-#about .about__jobs .jobs__container ul .jobs__right .job:last-child {
+#about .about__jobs .jobs__container .jobs__right {
+  align-items: flex-start;
   border-left: 1px solid var(--color-blue);
 }
 
-#about .about__jobs .jobs__container ul .jobs__left .education > p,
-#about .about__jobs .jobs__container ul .jobs__right .job > p {
-  font-size: var(--font-small);
-  color: var(--color-dark-grey);
+#about .about__jobs .jobs__container ul li {
+  position: relative;
+  flex: 1;
 }
 
-#about .about__jobs .jobs__container ul .jobs__left .education > p:last-of-type,
-#about .about__jobs .jobs__container ul .jobs__right .job > p:last-of-type {
-  font-size: var(--font-micro);
-  margin-bottom: 14px;
-}
-
-#about .about__jobs .jobs__container .jobs__circles {
-  position: absolute;
-  top: 0;
-  right: 50%;
-  transform: translateX(50%);
-  height: 100%;
+#about .about__jobs .jobs__container ul li > div {
   display: flex;
   flex-direction: column;
 }
 
-#about .about__jobs .jobs__container .jobs__circles div {
-  flex: 1;
-  display: flex;
-  padding-top: 6px;
-}
-
-#about .about__jobs .jobs__container .jobs__circles div > .circle {
+#about .about__jobs .jobs__container ul li > span {
+  position: absolute;
   display: inline-block;
+  top: 0;
   width: 20px;
   height: 20px;
   border: 2px solid var(--color-blue);
   border-radius: 50%;
   background-color: var(--color-white);
+  margin-top: 5px;
+}
+
+#about .about__jobs .jobs__container ul.jobs__left li > span {
+  right: -1px;
+  transform: translateX(50%);
+}
+
+#about .about__jobs .jobs__container ul.jobs__right li > span {
+  left: -1px;
+  transform: translateX(-50%);
+}
+
+#about .about__jobs .jobs__container ul li > div.education {
+  align-items: flex-end;
+  padding-right: 30px;
+}
+
+#about .about__jobs .jobs__container ul li > div.job {
+  align-items: flex-start;
+  padding-left: 30px;
+}
+
+#about .about__jobs .jobs__container ul li div > p {
+  font-size: var(--font-small);
+  color: var(--color-dark-grey);
+}
+
+#about .about__jobs .jobs__container ul li div > p:last-of-type {
+  font-size: var(--font-micro);
 }
 
 /* Skill */
@@ -500,6 +496,7 @@ p {
   height: 250px;
   margin: 2px;
   background-color: var(--color-light-white);
+  border: 1px solid var(--color-light-white);
   overflow: hidden;
 }
 
