@@ -366,6 +366,14 @@ p {
   font-size: var(--font-micro);
 }
 
+#about .about__jobs .jobs__container ul li > div.education > p {
+  text-align: end;
+}
+
+#about .about__jobs .jobs__container ul li > div.job > p {
+  text-align: start;
+}
+
 /* Skill */
 #skills {
   background-color: var(--color-yellow);
