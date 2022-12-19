@@ -6,7 +6,7 @@ const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
 const homeContactBtn = document.querySelector(".home__contact");
 const home = document.querySelector(".home__container");
 const homeHeight = home.getBoundingClientRect().height;
-const arrowUp = document.querySelector(".arrow-up");
+const arrowContainer = document.querySelector(".arrow__container");
 const workBtnContainer = document.querySelector(".work__categories");
 const projectContainer = document.querySelector(".work__projects");
 const projects = document.querySelectorAll(".project");
@@ -49,14 +49,14 @@ document.addEventListener("scroll", () => {
 // Show "arrow up" button when scrolling down
 document.addEventListener("scroll", () => {
   if (window.scrollY > homeHeight / 2) {
-    arrowUp.classList.add("visible");
+    arrowContainer.classList.add("visible");
   } else {
-    arrowUp.classList.remove("visible");
+    arrowContainer.classList.remove("visible");
   }
 });
 
 // Handle click on the "arrow up" button
-arrowUp.addEventListener("click", () => {
+arrowContainer.addEventListener("click", () => {
   scrollIntoView("#home");
 });
 
