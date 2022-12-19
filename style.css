@@ -481,6 +481,7 @@ em {
   border-radius: var(--size-border-radius);
   font-family: "Montserrat", sans-serif;
   font-size: var(--font-small);
+  color: var(--color-black);
   text-transform: uppercase;
   padding: 8px 48px;
   position: relative;
