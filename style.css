@@ -39,7 +39,8 @@ font-family: 'Open Sans', sans-serif;
   --size-border-radius: 4px;
 
   /* Animation */
-  --animation-duration: 300ms;
+  --animation-duration-2: 200ms;
+  --animation-duration-3: 300ms;
 }
 
 /* Univeral tags */
@@ -121,7 +122,7 @@ em {
   align-items: center;
   color: var(--color-white);
   padding: 16px;
-  transition: all var(--animation-duration) ease-in-out;
+  transition: all var(--animation-duration-3) ease-in-out;
   z-index: 1;
 }
 
@@ -143,18 +144,19 @@ em {
 #navbar .navbar__menu .navbar__menu__item {
   padding: 8px 12px;
   margin: 0 4px;
+  font-weight: var(--weight-semi-bold);
   color: var(--color-white);
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: var(--size-border-radius);
+  transition: background-color var(--animation-duration-2) ease-in-out;
 }
 
 #navbar .navbar__menu .navbar__menu__item.active {
-  border: 1px solid var(--color-white);
+  border: 2px solid var(--color-white);
 }
 
 #navbar .navbar__menu .navbar__menu__item:hover {
-  border-color: var(--color-white);
   background-color: var(--color-dark-purple);
 }
 
@@ -269,7 +271,7 @@ em {
 }
 
 #about .about__majors .major .major__icon i {
-  transition: all var(--animation-duration) ease;
+  transition: all var(--animation-duration-3) ease;
 }
 
 #about .about__majors .major .major__icon:hover i {
@@ -471,6 +473,7 @@ em {
   text-transform: uppercase;
   padding: 8px 48px;
   position: relative;
+  transition: all var(--animation-duration-2) ease-in-out;
 }
 
 #work .work__categories .category__btn.selected,
@@ -498,7 +501,7 @@ em {
   top: -20px;
   right: 8px;
   opacity: 0;
-  transition: all var(--animation-duration) ease-in;
+  transition: all var(--animation-duration-3) ease-in;
 }
 
 #work .work__projects {
@@ -506,7 +509,7 @@ em {
   flex-wrap: wrap;
   justify-content: center;
   opacity: 1;
-  transition: all var(--animation-duration) ease-out;
+  transition: all var(--animation-duration-3) ease-out;
 }
 
 #work .work__projects.anim-out {
@@ -556,7 +559,7 @@ em {
   left: 0;
   opacity: 0;
   transform: translateY(10px);
-  transition: all var(--animation-duration) ease-in;
+  transition: all var(--animation-duration-3) ease-in;
   padding: 20px 15px;
 }
 
@@ -579,7 +582,7 @@ em {
   border-radius: 50%;
   color: var(--color-black);
   background-color: var(--color-white);
-  transition: all 0.2s ease-in-out;
+  transition: all var(--animation-duration-2) ease-in-out;
 }
 
 #work
@@ -649,7 +652,7 @@ em {
 #contact .contact__links {
   font-size: var(--font-large);
   margin: 24px 0;
-  transition: all var(--animation-duration) ease-in;
+  transition: all var(--animation-duration-3) ease-in;
 }
 
 #contact .contact__links i:hover {
@@ -684,7 +687,7 @@ em {
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 300ms ease-in;
+  transition: opacity var(--animation-duration-3) ease-in;
 }
 
 .arrow-up.visible {
