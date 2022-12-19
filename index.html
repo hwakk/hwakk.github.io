@@ -10,7 +10,7 @@
       content="Portfolio for world-renowned software engineer Hwakk"
     />
     <meta name="author" content="Hwakk" />
-    <!-- <link rel="icon" type="image/png" href="/images/favicon.png"> -->
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="stylesheet" href="/style.css" />
     <script
       src="https://kit.fontawesome.com/725b2f0ba3.js"
@@ -22,8 +22,8 @@
     <!-- Navbar -->
     <nav id="navbar">
       <div class="navbar__logo">
-        <i class="fab fa-diaspora"></i>
-        <a href="#">Hwakk</a>
+        <i class="fas fa-cookie-bite"></i>
+        <a href="https://hwakk.github.io/">Hwakk</a>
       </div>
       <ul class="navbar__menu">
         <li class="navbar__menu__item" data-link="#home">Home</li>
@@ -66,7 +66,8 @@
           </div>
           <h2 class="major__title">Front-end</h2>
           <div class="major__description">
-            HTML, CSS, JavaScript, TypeScript<br />React, Redux(React-redux)
+            <span>HTML, CSS, JavaScript,</span>
+            <span>TypeScript, React, React Redux</span>
           </div>
         </div>
         <div class="major">
@@ -75,7 +76,8 @@
           </div>
           <h2 class="major__title">Back-end</h2>
           <div class="major__description">
-            Java, JSP, Python<br />Spring Boot, Spring MVC
+            <span>Java, JSP, Python,</span>
+            <span>Spring Boot, Spring MVC</span>
           </div>
         </div>
         <div class="major">
@@ -84,8 +86,9 @@
           </div>
           <h2 class="major__title">DevOps</h2>
           <div class="major__description">
-            npm, Nodejs<br />Visual Studio Code, Eclipse,<br />Git, Github,
-            Slack, Notion
+            <span>npm, Nodejs,</span>
+            <span>Visual Studio Code, Eclipse,</span>
+            <span>Git, Github, Slack, Notion</span>
           </div>
         </div>
       </div>
@@ -98,7 +101,7 @@
           <ul class="jobs__left">
             <li>
               <div class="education">
-                <p class="education__name">중앙대학교(공예학과)</p>
+                <p class="education__name"><em>중앙대학교</em>(공예학과)</p>
                 <p class="education__period">2012 Feb - 2017 Feb</p>
               </div>
               <span class="circle"></span>
@@ -107,7 +110,7 @@
             <li>
               <div class="education">
                 <p class="education__name">
-                  KGITBANK(반응형 자바 웹 개발자 양성)
+                  <em>KGITBANK</em>(반응형 자바 웹 개발자 양성)
                 </p>
                 <p class="education__period">2019 Jul - 2020 Nov</p>
               </div>
@@ -119,7 +122,7 @@
             <li></li>
             <li>
               <div class="job">
-                <p class="job__name">허브로스팅(웹디자인)</p>
+                <p class="job__name"><em>허브로스팅</em>(웹디자인)</p>
                 <p class="job__period">2017 Dec - 2020 Mar</p>
               </div>
               <span class="circle"></span>
@@ -127,7 +130,7 @@
             <li></li>
             <li>
               <div class="job">
-                <p class="job__name">엔쓰리엔(전략파트너사업본부)</p>
+                <p class="job__name"><em>엔쓰리엔</em>(전략파트너사업본부)</p>
                 <p class="job__period">2021 Jan - 2021 May</p>
               </div>
               <span class="circle"></span>
@@ -232,7 +235,7 @@
           <button class="category__btn" data-filter="HTML">
             HTML&#47;CSS<span class="category__count">5</span>
           </button>
-          <button class="category__btn" data-filter="React">
+          <button class="category__btn" data-filter="REACT">
             React<span class="category__count">2</span>
           </button>
         </div>
@@ -245,15 +248,21 @@
                 class="project__img"
               />
               <div class="project__description">
-                <h3>Simple Blog Layout</h3>
-                <p>PSD to HTML, CSS</p>
-                <div>
-                  <a href="/portfolio/blog01" target="_blank">Link</a>
+                <div class="project__link">
+                  <a href="/portfolio/blog01" target="_blank">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                  </a>
                   <a
                     href="https://github.com/hwakk/portfolio.git"
                     target="_blank"
-                    >GitHub</a
                   >
+                    <i class="fas fa-code"></i>
+                  </a>
+                </div>
+                <div class="project__title">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <h3>Simple Blog Layout</h3>
                 </div>
               </div>
             </li>
@@ -264,15 +273,21 @@
                 class="project__img"
               />
               <div class="project__description">
-                <h3>Accordian Slider</h3>
-                <p>Flex layout accordian navigation</p>
-                <div>
-                  <a href="/portfolio/blog02" target="_blank">Link</a>
+                <div class="project__link">
+                  <a href="/portfolio/blog02" target="_blank">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                  </a>
                   <a
                     href="https://github.com/hwakk/portfolio.git"
                     target="_blank"
-                    >GitHub</a
                   >
+                    <i class="fas fa-code"></i>
+                  </a>
+                </div>
+                <div class="project__title">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <h3>Accordian Slider</h3>
                 </div>
               </div>
             </li>
@@ -283,15 +298,21 @@
                 class="project__img"
               />
               <div class="project__description">
-                <h3>Blog Layout</h3>
-                <p>PSD to HTML, CSS</p>
-                <div>
-                  <a href="/portfolio/blog03" target="_blank">Link</a>
+                <div class="project__link">
+                  <a href="/portfolio/blog03" target="_blank">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                  </a>
                   <a
                     href="https://github.com/hwakk/portfolio.git"
                     target="_blank"
-                    >GitHub</a
                   >
+                    <i class="fas fa-code"></i>
+                  </a>
+                </div>
+                <div class="project__title">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <h3>Blog Layout</h3>
                 </div>
               </div>
             </li>
@@ -302,53 +323,71 @@
                 class="project__img"
               />
               <div class="project__description">
-                <h3>Starbucks</h3>
-                <p>Clone coding with HTML and CSS</p>
-                <div>
-                  <a href="/portfolio/starbucks" target="_blank">Link</a>
+                <div class="project__link">
+                  <a href="/portfolio/starbucks" target="_blank">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                  </a>
                   <a
                     href="https://github.com/hwakk/portfolio.git"
                     target="_blank"
-                    >GitHub</a
                   >
+                    <i class="fas fa-code"></i>
+                  </a>
+                </div>
+                <div class="project__title">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <h3>Starbucks</h3>
                 </div>
               </div>
             </li>
-            <li class="project" data-type="React">
+            <li class="project" data-type="REACT">
               <img
                 src="/images/projects/todo.png"
                 alt="Todo"
                 class="project__img"
               />
               <div class="project__description">
-                <h3>Todo List</h3>
-                <p>Coding with React, PostCSS</p>
-                <div>
-                  <a href="/react_elli_todo" target="_blank">Link</a>
+                <div class="project__link">
+                  <a href="/react_elli_todo" target="_blank">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                  </a>
                   <a
                     href="https://github.com/hwakk/react_elli_todo.git"
                     target="_blank"
-                    >GitHub</a
                   >
+                    <i class="fas fa-code"></i>
+                  </a>
+                </div>
+                <div class="project__title">
+                  <span>React</span>
+                  <span>POSTCSS</span>
+                  <h3>Todo List</h3>
                 </div>
               </div>
             </li>
-            <li class="project" data-type="React">
+            <li class="project" data-type="REACT">
               <img
                 src="/images/projects/youtube.png"
                 alt="Youtube"
                 class="project__img"
               />
               <div class="project__description">
-                <h3>Youtube</h3>
-                <p>Clone coding with React</p>
-                <div>
-                  <a href="/react_elli_youtube" target="_blank">Link</a>
+                <div class="project__link">
+                  <a href="/react_elli_youtube" target="_blank">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                  </a>
                   <a
                     href="https://github.com/hwakk/react_elli_youtube.git"
                     target="_blank"
-                    >GitHub</a
                   >
+                    <i class="fas fa-code"></i>
+                  </a>
+                </div>
+                <div class="project__title">
+                  <span>React</span>
+                  <span>CSS</span>
+                  <h3>Youtube</h3>
                 </div>
               </div>
             </li>
@@ -359,15 +398,21 @@
                 class="project__img"
               />
               <div class="project__description">
-                <h3>Blog Layout</h3>
-                <p>Clone coding with HTML and CSS</p>
-                <div>
-                  <a href="/portfolio/blog05" target="_blank">Link</a>
+                <div class="project__link">
+                  <a href="/portfolio/blog05" target="_blank">
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                  </a>
                   <a
                     href="https://github.com/hwakk/portfolio.git"
                     target="_blank"
-                    >GitHub</a
                   >
+                    <i class="fas fa-code"></i>
+                  </a>
+                </div>
+                <div class="project__title">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <h3>Blog Layout</h3>
                 </div>
               </div>
             </li>

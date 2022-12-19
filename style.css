@@ -11,14 +11,14 @@ font-family: 'Open Sans', sans-serif;
   --color-white: #fff;
   --color-light-white: #eee;
   --color-dark-white: #bdbdbd;
-  --color-purple: #d4a7d2;
-  --color-light-purple: #eed2fb;
-  --color-dark-purple: #8c6896;
+  --color-purple: #e3a6aa;
+  --color-light-purple: #ffd1a1;
+  --color-dark-purple: #c45b69;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
   --color-dark-grey: #4d4d4d;
-  --color-blue: #9dadc9;
-  --color-yellow: #ffeccf;
+  --color-blue: #9ac0b3;
+  --color-yellow: #fef5e4;
   --color-black: #121212;
 
   /* Font size */
@@ -107,6 +107,10 @@ p {
   margin: 4px 0px;
 }
 
+em {
+  font-style: normal;
+}
+
 /* Navbar */
 #navbar {
   position: fixed;
@@ -123,12 +127,12 @@ p {
 
 #navbar.navbar--dark {
   background-color: var(--color-purple);
-  padding: 8px;
 }
 
 #navbar .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+  padding: 0 12px;
 }
 
 #navbar .navbar__menu {
@@ -248,6 +252,10 @@ p {
   margin: 60px 0 80px 0;
 }
 
+#about .about__majors .major {
+  flex: 1;
+}
+
 #about .about__majors .major .major__icon {
   width: 170px;
   height: 170px;
@@ -279,6 +287,10 @@ p {
   font-size: var(--font-small);
 }
 
+#about .about__majors .major .major__description span {
+  display: block;
+}
+
 #about .about__jobs {
   margin-bottom: 20px;
 }
@@ -296,6 +308,7 @@ p {
 
 #about .about__jobs .jobs__container {
   display: flex;
+  overflow: hidden;
 }
 
 #about .about__jobs .jobs__container ul {
@@ -381,7 +394,6 @@ p {
 
 #skills .skillset {
   display: flex;
-  background-color: var(--color-light-grey);
   color: var(--color-light-white);
   margin: 20px 0;
 }
@@ -393,7 +405,9 @@ p {
 #skills .skillset .skillset__left {
   flex-basis: 60%;
   background-color: var(--color-dark-grey);
+  border-radius: 10px;
   padding: 20px 40px;
+  margin-right: 5px;
 }
 
 #skills .skillset .skillset__left .skill {
@@ -421,14 +435,26 @@ p {
 
 #skills .skillset .skillset__right {
   flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
 }
 
 #skills .skillset .skillset__right .tools {
+  flex: 55%;
   background-color: var(--color-grey);
+  margin-bottom: 5px;
+}
+
+#skills .skillset .skillset__right .etc {
+  flex: 45%;
+  background-color: var(--color-light-grey);
+  margin-top: 5px;
 }
 
 #skills .skillset .skillset__right .tools,
 #skills .skillset .skillset__right .etc {
+  border-radius: 10px;
   padding: 20px;
 }
 
@@ -520,10 +546,10 @@ p {
 
 #work .work__projects .project .project__description {
   position: absolute;
-  background-color: var(--color-black);
+  background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.8));
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
   top: 0;
@@ -531,33 +557,77 @@ p {
   opacity: 0;
   transform: translateY(10px);
   transition: all var(--animation-duration) ease-in;
+  padding: 20px 15px;
 }
 
 #work .work__projects .project:hover .project__description {
-  opacity: 0.8;
+  opacity: 1;
   transform: translateY(0px);
 }
 
-#work .work__projects .project .project__description h3 {
-  color: var(--color-light-purple);
+#work .work__projects .project .project__description .project__link {
+  display: flex;
+  align-self: flex-end;
 }
 
-#work .work__projects .project .project__description h3:after {
-  content: "";
-  display: block;
-  position: relative;
-  left: 50%;
-  width: 50px;
-  height: 2px;
-  transform: translateX(-50%);
-  /* margin-left: -12px; */
-  margin-top: 8px;
-  background-color: var(--color-dark-white);
+#work .work__projects .project .project__description .project__link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  transition: all 0.2s ease-in-out;
 }
 
-#work .work__projects .project .project__description p {
+#work
+  .work__projects
+  .project
+  .project__description
+  .project__link
+  a:first-of-type {
+  margin-right: 5px;
+}
+
+#work .work__projects .project .project__description .project__link a:hover {
   color: var(--color-white);
-  font-size: 16px;
+  background-color: var(--color-dark-purple);
+}
+
+#work .work__projects .project .project__description .project__link a > i {
+  font-size: var(--font-micro);
+}
+
+#work .work__projects .project .project__description .project__title {
+  align-self: flex-start;
+  text-align: left;
+  width: 100%;
+}
+
+#work .work__projects .project .project__description .project__title span {
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  font-size: var(--font-micro);
+  color: var(--color-white);
+  text-transform: uppercase;
+  background-color: var(--color-blue);
+  border-radius: 12px;
+  padding: 0 8px;
+  margin: 4px 0;
+}
+
+#work .work__projects .project .project__description .project__title h3 {
+  color: var(--color-white);
+  font-size: var(--font-regular);
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  margin-top: 4px;
 }
 
 /* Contact */
@@ -680,8 +750,28 @@ p {
     margin-bottom: 60px;
   }
 
+  #about .about__jobs .jobs__container ul {
+    height: 288px;
+  }
+
+  #about .about__jobs .jobs__container ul li div > p:first-of-type em {
+    display: block;
+  }
+
   #skills .skillset {
     flex-direction: column;
+  }
+
+  #skills .skillset .skillset__left {
+    margin: 0 0 5px 0;
+  }
+
+  #skills .skillset .skillset__right {
+    margin-left: 0;
+  }
+
+  #skills .skillset .skillset__right .tools {
+    margin-top: 5px;
   }
 
   #work .work__categories .category__btn {
