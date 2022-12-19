@@ -815,6 +815,7 @@ em {
     line-height: 50px;
     right: 16px;
     bottom: 16px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
+    overflow: hidden;
   }
 }
