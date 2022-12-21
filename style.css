@@ -131,7 +131,6 @@ em {
   justify-content: space-between;
   background-color: transparent;
   align-items: center;
-  /* color: var(--color-white); */
   padding: 16px;
   transition: all var(--animation-duration-3) ease-in-out;
   z-index: 1;
@@ -191,7 +190,6 @@ em {
   position: relative;
   padding: 40px;
   padding-top: 120px;
-  /* background: url(images/home-background2.png) no-repeat 50% 0 / auto; */
   background-color: var(--color-yellow);
 }
 
@@ -204,8 +202,8 @@ em {
 #home .home__container .home__avatar {
   position: absolute;
   top: 0;
-  right: 50%;
-  transform: translateX(50%);
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -242,7 +240,7 @@ em {
   display: block;
   top: 0;
   left: 50%;
-  transform: translate(50%, -12px);
+  transform: translate(-50%, -14px);
   width: 28px;
   height: 28px;
   border-radius: 50%;
@@ -294,8 +292,8 @@ em {
 
 #home .home__container .home__avatar .home__name {
   bottom: 0;
-  right: 50%;
-  transform: translate(100%, -22px);
+  left: 50%;
+  transform: translateY(-22px);
 }
 
 #home .home__container .home__avatar .home__name > span {
@@ -303,7 +301,7 @@ em {
 }
 
 #home .home__container .home__avatar .home__name > span:first-of-type {
-  margin-left: 107px;
+  margin-left: 55%;
 }
 
 @keyframes blink {
@@ -833,6 +831,11 @@ em {
     padding: 16px;
   }
 
+  #navbar .navbar__logo i,
+  #navbar .navbar__logo a {
+    color: var(--color-white);
+  }
+
   #navbar .navbar__menu {
     flex-direction: column;
     text-align: center;
@@ -845,7 +848,12 @@ em {
   }
 
   #home {
-    padding-top: 180px;
+    padding: 16px;
+    padding-top: 100px;
+  }
+
+  #home .home__container {
+    height: 330px;
   }
 
   #home .home__container .home__avatar {
@@ -856,6 +864,20 @@ em {
   #home .home__container .home__avatar img {
     width: 200px;
     height: 200px;
+  }
+
+  #home .home__container .home__circle > span {
+    transform: translateY(-11px);
+    width: 22px;
+    height: 22px;
+  }
+
+  #home .home__container .home__avatar .home__title {
+    transform: translate(-56px, 10px);
+  }
+
+  #home .home__container .home__avatar .home__name {
+    transform: translate(10px, -18px);
   }
 
   .section {
