@@ -41,10 +41,10 @@ homeContactBtn.addEventListener("click", () => {
   scrollIntoView("#contact");
 });
 
-// Make home slowly fade to transparent as the window scrolls down
-document.addEventListener("scroll", () => {
-  home.style.opacity = 1 - window.scrollY / homeHeight;
-});
+// // Make home slowly fade to transparent as the window scrolls down
+// document.addEventListener("scroll", () => {
+//   home.style.opacity = 1 - window.scrollY / homeHeight;
+// });
 
 // Show "arrow up" button when scrolling down
 document.addEventListener("scroll", () => {
