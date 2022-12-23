@@ -700,12 +700,25 @@ em {
 }
 
 #work .work__projects .project .project__description .project__title {
+  display: flex;
+  flex-direction: column;
   align-self: flex-start;
   text-align: left;
   width: 100%;
+  overflow: hidden;
 }
 
-#work .work__projects .project .project__description .project__title span {
+#work .work__projects .project .project__description .project__title .skill {
+  overflow: hidden;
+}
+
+#work
+  .work__projects
+  .project
+  .project__description
+  .project__title
+  .skill
+  span {
   display: inline-block;
   height: 24px;
   line-height: 24px;
@@ -718,7 +731,7 @@ em {
   margin: 4px 0;
 }
 
-#work .work__projects .project .project__description .project__title h3 {
+#work .work__projects .project .project__description .project__title .title h3 {
   color: var(--color-white);
   font-size: var(--font-regular);
   width: 100%;
